@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:onClick="logWater"
+        android:text="Water"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:onClick="logExercise"
+        android:text="Exercise"
+        app:layout_constraintStart_toEndOf="@+id/water"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        android:onClick="logSleep"
+        android:text="Sleep"
+        app:layout_constraintStart_toEndOf="@+id/exercise"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="logMood"
+        android:text="Mood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sleep"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/log_and_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Log and View:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mh_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="Your Mental Health Score:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/water" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="147dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="60sp"
+        app:layout_constraintStart_toEndOf="@+id/mh_score"
+        app:layout_constraintTop_toBottomOf="@+id/sleep" />
+
+    <TextView
+        android:id="@+id/goals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="372dp"
+        android:text="Goals:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mh_score" />
+
+    <TextView
+        android:id="@+id/current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:text="Current:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goals" />
+
+    <TextView
+        android:id="@+id/water_goal"
+        android:layout_width="38dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="52dp"
+        android:text="n/a"
+        app:layout_constraintStart_toEndOf="@+id/goals"
+        tools:layout_editor_absoluteY="539dp" />
+
+    <TextView
+        android:id="@+id/water_curr"
+        android:layout_width="40dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/current"
+        app:layout_constraintTop_toBottomOf="@+id/water_goal" />
+
+    <TextView
+        android:id="@+id/exercise_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="n/a"
+        app:layout_constraintStart_toEndOf="@+id/water_goal"
+        tools:layout_editor_absoluteY="542dp" />
+
+    <TextView
+        android:id="@+id/exercise_curr"
+        android:layout_width="19dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/water_curr"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_goal" />
+
+    <TextView
+        android:id="@+id/sleep_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="n/a"
+        app:layout_constraintStart_toEndOf="@+id/exercise_goal"
+        tools:layout_editor_absoluteY="539dp" />
+
+    <TextView
+        android:id="@+id/sleep_curr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/exercise_curr"
+        app:layout_constraintTop_toBottomOf="@+id/sleep_goal" />
+
+    <TextView
+        android:id="@+id/mood_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="n/a"
+        app:layout_constraintStart_toEndOf="@+id/sleep_goal"
+        tools:layout_editor_absoluteY="539dp" />
+
+    <TextView
+        android:id="@+id/mood_curr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:text="n/a"
+        app:layout_constraintStart_toEndOf="@+id/sleep_curr"
+        app:layout_constraintTop_toBottomOf="@+id/mood_goal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
